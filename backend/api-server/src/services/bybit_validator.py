@@ -160,8 +160,9 @@ class BybitApiValidator:
             raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 detail="API 연결 테스트 중 오류가 발생했습니다."
-            )    
-def _generate_signature(
+            )
+    
+    def _generate_signature(
         self,
         api_secret: str,
         timestamp: str,

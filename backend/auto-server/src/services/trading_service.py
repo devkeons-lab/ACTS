@@ -182,8 +182,9 @@ class BybitTradingService:
                 "sufficient": False,
                 "available_balance": 0,
                 "error": str(error)
-            }    async 
-def _get_current_price(self, symbol: str) -> Optional[float]:
+            }
+    
+    async def _get_current_price(self, symbol: str) -> Optional[float]:
         """현재 가격 조회"""
         try:
             endpoint = "/v5/market/tickers"

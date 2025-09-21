@@ -162,8 +162,9 @@ class AutoTradingScheduler:
                 "interval": interval,
                 "error": str(error)
             })
-            return []    asyn
-c def _get_active_users(self) -> List[Dict[str, Any]]:
+            return []
+    
+    async def _get_active_users(self) -> List[Dict[str, Any]]:
         """자동매매 활성 사용자 조회"""
         try:
             users_data = execute_query("""

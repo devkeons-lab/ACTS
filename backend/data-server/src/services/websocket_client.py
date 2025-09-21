@@ -108,8 +108,9 @@ class BybitWebSocketClient:
         except Exception as error:
             log_error("WebSocket 메시지 루프 오류", {'error': str(error)})
             await self._update_system_status('error')
-            await self._schedule_reconnect()    asyn
-c def _handle_message(self, message: str) -> None:
+            await self._schedule_reconnect()
+    
+    async def _handle_message(self, message: str) -> None:
         """메시지 처리"""
         try:
             data = json.loads(message)

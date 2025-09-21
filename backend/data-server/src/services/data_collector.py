@@ -95,8 +95,9 @@ class DataCollector:
             
         except Exception as error:
             log_error("캔들 데이터 저장 실패", {'error': str(error)})
-            raise  
-  async def collect_latest_candle(self) -> Optional[CandleData]:
+            raise
+    
+    async def collect_latest_candle(self) -> Optional[CandleData]:
         """최신 캔들 데이터 수집 (1개)"""
         try:
             candles = await self.bybit_client.get_kline_data(
