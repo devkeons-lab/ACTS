@@ -99,8 +99,7 @@ class BybitApiClient:
                 'limit': limit,
                 'error': str(error)
             })
-            raise    asyn
-c def get_bulk_kline_data(
+            raise    async def get_bulk_kline_data(
         self,
         symbol: str = 'BTCUSDT',
         interval: str = '1',
