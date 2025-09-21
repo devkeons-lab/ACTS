@@ -1,0 +1,36 @@
+{
+  "name": "crypto-trading-system",
+  "version": "1.0.0",
+  "description": "GPT 기반 코인 자동매매 시스템",
+  "private": true,
+  "scripts": {
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend/data-server && npm install && cd ../auto-server && npm install && cd ../api-server && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "dev:data": "cd backend/data-server && npm run dev",
+    "dev:auto": "cd backend/auto-server && npm run dev",
+    "dev:api": "cd backend/api-server && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:all": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend/data-server && npm run build && cd ../auto-server && npm run build && cd ../api-server && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "start:data": "cd backend/data-server && npm start",
+    "start:auto": "cd backend/auto-server && npm start",
+    "start:api": "cd backend/api-server && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "trading",
+    "automation",
+    "gpt",
+    "bybit",
+    "nodejs",
+    "nextjs"
+  ],
+  "author": "Crypto Trading Team",
+  "license": "MIT"
+}
